@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "fullName": "Рома Романов",
+        "date": "2021-06-25",
+        "skill": "JavaScript",
+        "gender": "Мужской",
+        "status": "Создан",
+        "activity": 1
+    },
+    {
+        "id": 2,
+        "fullName": "Сергей Лацков",
+        "date": "2021-06-25",
+        "skill": "HTML",
+        "gender": "Мужской",
+        "status": "Нейтрален",
+        "activity": 2
+    },{
+        "id": 3,
+        "fullName": "Анастасия Горбаченко",
+        "date": "2021-06-25",
+        "skill": "CSS",
+        "gender": "Женский",
+        "status": "В рейтинге",
+        "activity": 1
+    },{
+        "id": 4,
+        "fullName": "Алексей Пузич",
+        "date": "2021-06-25",
+        "skill": "Java",
+        "gender": "Мужской",
+        "status": "Ожидает",
+        "activity": 1
+    },
+    {
+        "id": 5,
+        "fullName": "Алёна Гаврик",
+        "date": "2021-06-25",
+        "skill": "C++",
+        "gender": "Женский",
+        "status": "Нейтрален",
+        "activity": 1
+    },
+    {
+        "id": 6,
+        "fullName": "Евгения Онил",
+        "date": "2021-06-25",
+        "skill": "C#",
+        "gender": "Женский",
+        "status": "Ожидает",
+        "activity": 1
+    },
+    {
+        "id": 7,
+        "fullName": "Роман Фулстакович",
+        "date": "2021-06-25",
+        "skill": "JavaScript",
+        "gender": "Мужской",
+        "status": "В рейтинге",
+        "activity": 1
+    }
+]
