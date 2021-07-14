@@ -3,13 +3,6 @@
     <div class="admins">
       <p class="text-uppercase">
         Работодатели</p>
-      <b-button
-        v-ripple.400="'rgba(113, 102, 240, 0.15)'"
-        class="admins__btn"
-        variant="flat-primary"
-      >
-        Добавить
-      </b-button>
     </div>
 
     <!-- table -->
@@ -41,9 +34,9 @@
         slot-scope="props"
       >
 
-        <!-- Column: nameCompany -->
+        <!-- Column: companyName -->
         <div
-          v-if="props.column.field === 'nameCompany'"
+          v-if="props.column.field === 'companyName'"
           class="text-nowrap pointer"
           @click="$router.push('/employer-card?id='+props.row.id)"
         >
@@ -51,13 +44,13 @@
             :src="props.row.avatar"
             class="mx-1"
           />
-          <span class="text-nowrap">{{ props.row.nameCompany }}</span>
+          <span class="text-nowrap">{{ props.row.companyName }}</span>
         </div>
 
         <!-- Column: startVerification -->
         <span
           v-else-if="props.column.field === 'startVerification'"
-          @click="$router.push('/verification-profile?id='+props.row.id)"
+          @click="$router.push('/verification-employer-contact-card?id='+props.row.id)"
         >
           <span class="pointer text-primary">
             <u>Начать верификацию</u>
@@ -124,7 +117,7 @@
 
 <script>
 import {
-  BAvatar, BPagination, BFormSelect, BButton,
+  BAvatar, BPagination, BFormSelect,
 } from 'bootstrap-vue'
 import { VueGoodTable } from 'vue-good-table'
 import store from '@/store/index'
@@ -137,7 +130,7 @@ export default {
     // BBadge,
     BPagination,
     BFormSelect,
-    BButton,
+    // BButton,
   },
   directives: {
     Ripple,
@@ -149,33 +142,24 @@ export default {
       dir: false,
       columns: [
         {
-          label: 'ID',
-          field: 'idName',
-          filterOptions: {
-            styleClass: 'form-control',
-            enabled: true,
-            placeholder: '123456',
-          },
-        },
-        {
-          label: 'Ожидает С:',
-          field: 'waiting',
+          label: 'Дата',
+          field: 'date',
           filterOptions: {
             enabled: true,
             placeholder: 'Дата',
           },
         },
         {
-          label: 'Логин',
-          field: 'login',
+          label: 'Должность',
+          field: 'position',
           filterOptions: {
             enabled: true,
-            placeholder: 'Логин',
+            placeholder: 'Должность',
           },
         },
         {
-          label: 'Название',
-          field: 'nameCompany',
+          label: 'Название компании',
+          field: 'companyName',
           filterOptions: {
             enabled: true,
             placeholder: 'Компания',
@@ -204,7 +188,7 @@ export default {
     },
   },
   created() {
-    this.$http.get('/assets/verification-employer-table.json')
+    this.$http.get('/assets/verification-employer-contact.json')
       .then(res => { this.rows = res.data })
   },
   methods: {

@@ -40,6 +40,16 @@ export default [
         route: 'verification',
         icon: 'CheckIcon',
       },
+      {
+        title: 'Контакты',
+        route: 'verification-employer-contact',
+        icon: 'PhoneIcon',
+      },
+      {
+        title: 'Соискатели',
+        route: 'verification-jobseekers',
+        icon: 'UsersIcon',
+      },
     ],
   },
   {

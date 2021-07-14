@@ -109,6 +109,62 @@ const router = new VueRouter({
       },
     },
     {
+      path: '/verification-jobseeker-profile',
+      name: 'verification-jobseeker-profile',
+      component: () => import('@/anworks/verification/VerificationProfileJobseeker.vue'),
+      meta: {
+        pageTitle: 'Верификация',
+        breadcrumb: [
+          {
+            text: 'Соискатели',
+            active: true,
+          },
+        ],
+      },
+    },
+    {
+      path: '/verification-employer-contact',
+      name: 'verification-employer-contact',
+      component: () => import('@/views/VerificationEmployerContact.vue'),
+      meta: {
+        pageTitle: 'Верификация',
+        breadcrumb: [
+          {
+            text: 'Контакты',
+            active: true,
+          },
+        ],
+      },
+    },
+    {
+      path: '/verification-employer-contact-card',
+      name: 'verification-employer-contact-card',
+      component: () => import('@/anworks/verification/VerificationContactsUsers.vue'),
+      meta: {
+        pageTitle: 'Верификация',
+        breadcrumb: [
+          {
+            text: 'Верификация контактов',
+            active: true,
+          },
+        ],
+      },
+    },
+    {
+      path: '/verification-jobseekers',
+      name: 'verification-jobseekers',
+      component: () => import('@/anworks/verification/VerificationJobSeekers.vue'),
+      meta: {
+        pageTitle: 'Верификация',
+        breadcrumb: [
+          {
+            text: 'Соискатели',
+            active: true,
+          },
+        ],
+      },
+    },
+    {
       path: '/finance-page',
       name: 'finance',
       component: () => import('@/views/Finance.vue'),

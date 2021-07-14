@@ -2,14 +2,7 @@
   <div>
     <div class="admins">
       <p class="text-uppercase">
-        Работодатели</p>
-      <b-button
-        v-ripple.400="'rgba(113, 102, 240, 0.15)'"
-        class="admins__btn"
-        variant="flat-primary"
-      >
-        Добавить
-      </b-button>
+        Соискатели</p>
     </div>
 
     <!-- table -->
@@ -41,23 +34,23 @@
         slot-scope="props"
       >
 
-        <!-- Column: nameCompany -->
+        <!-- Column: fullName -->
         <div
-          v-if="props.column.field === 'nameCompany'"
+          v-if="props.column.field === 'fullName'"
           class="text-nowrap pointer"
-          @click="$router.push('/employer-card?id='+props.row.id)"
+          @click="$router.push('/verification-profile?id='+props.row.id)"
         >
           <b-avatar
             :src="props.row.avatar"
             class="mx-1"
           />
-          <span class="text-nowrap">{{ props.row.nameCompany }}</span>
+          <span class="text-nowrap">{{ props.row.fullName }}</span>
         </div>
 
         <!-- Column: startVerification -->
         <span
           v-else-if="props.column.field === 'startVerification'"
-          @click="$router.push('/verification-profile?id='+props.row.id)"
+          @click="$router.push('/verification-jobseeker-profile?id='+props.row.id)"
         >
           <span class="pointer text-primary">
             <u>Начать верификацию</u>
@@ -124,11 +117,10 @@
 
 <script>
 import {
-  BAvatar, BPagination, BFormSelect, BButton,
+  BAvatar, BPagination, BFormSelect,
 } from 'bootstrap-vue'
 import { VueGoodTable } from 'vue-good-table'
 import store from '@/store/index'
-import Ripple from 'vue-ripple-directive'
 
 export default {
   components: {
@@ -137,10 +129,6 @@ export default {
     // BBadge,
     BPagination,
     BFormSelect,
-    BButton,
-  },
-  directives: {
-    Ripple,
   },
   data() {
     return {
@@ -174,11 +162,11 @@ export default {
           },
         },
         {
-          label: 'Название',
-          field: 'nameCompany',
+          label: 'Имя',
+          field: 'fullName',
           filterOptions: {
             enabled: true,
-            placeholder: 'Компания',
+            placeholder: 'Имя',
           },
         },
         {
@@ -204,7 +192,7 @@ export default {
     },
   },
   created() {
-    this.$http.get('/assets/verification-employer-table.json')
+    this.$http.get('/assets/verification-jobseekers-table.json')
       .then(res => { this.rows = res.data })
   },
   methods: {
