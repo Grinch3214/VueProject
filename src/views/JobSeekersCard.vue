@@ -1,12 +1,18 @@
 <template>
-  <div class="card bg-white p-5">
+  <div class="card bg-white p-2 p-lg-5">
     <b-tabs pills>
       <b-tab
-        title="Основная информация"
         active
       >
+        <template #title>
+          <feather-icon
+            icon="UserIcon"
+            class="mr-50 d-inline d-sm-none"
+          />
+          <span class="d-none d-sm-inline">Основная информация</span>
+        </template>
         <b-card-text>
-          <p class="h4">
+          <p class="h4 mt-2">
             Мария Иванова</p>
           <b-avatar
             rounded="sm"
@@ -18,8 +24,8 @@
           <info-job-seeker-user />
 
           <!-- submit and reset -->
-          <div class=" mt-5 d-flex justify-content-between col-9 pl-0">
-            <div>
+          <div class=" mt-2 mt-lg-5 d-flex justify-content-between flex-wrap col-lg-9 pl-0">
+            <div class="mb-1">
               <b-button
                 v-ripple.400="'rgba(255, 255, 255, 0.15)'"
                 type="submit"
@@ -74,7 +80,7 @@
             icon="PhoneIcon"
             class="mr-50"
           />
-          Контакты
+          <span class="d-none d-sm-inline">Контакты</span>
         </template>
         <b-card-text>
 
@@ -108,7 +114,7 @@
             badge="2"
             badge-classes="badge-danger badge-glow"
           />
-          Жалобы
+          <span class="d-none d-sm-inline">Жалобы</span>
         </template>
         <b-card-text>
           <complaints-job-seeker />
@@ -125,7 +131,7 @@ import {
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import InfoJobSeekerUser from '@/anworks/jobSeekers/InfoJobSeekerUser.vue'
-import ContactJobSeekerUser from '@/anworks/components/ContactTabUser.vue'
+import ContactJobSeekerUser from '@/anworks/components/ContactJobSeekerUser.vue'
 import ComplaintsJobSeeker from '@/anworks/components/ComplaintsForTab.vue'
 
 export default {
@@ -164,5 +170,10 @@ export default {
 }
 .badge.badge-up {
     top: -21px;
+}
+@media screen and (max-width: 575px) {
+  [dir=ltr] .badge.badge-up {
+    right: -30px;
+  }
 }
 </style>

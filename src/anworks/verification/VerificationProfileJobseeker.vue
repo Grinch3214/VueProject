@@ -3,7 +3,8 @@
     <b-card>
       <p class="h4 mb-2">
         Профиль соискателя</p>
-      <p class="h5">{{ profileInfo.fullName }}</p>
+      <p class="h5">
+        {{ profileInfo.fullName }}</p>
       <avatar-selector />
       <div class="row align-items-center mt-2 mb-2">
         <div class="col-sm-12 col-md-3 h5">
@@ -226,12 +227,12 @@
 
       <div class="row align-items-center mt-2 mb-2">
         <div class="col-sm-12 col-md-3 h5">
-          Страна:
+          Уровень:
         </div>
         <div class="col-sm-12 col-md-4">
           <b-form-select
-            v-model="country"
-            :options="countryOptions"
+            v-model="level"
+            :options="levelOptions"
             size="md"
             class="mt-1"
           />
@@ -240,16 +241,30 @@
 
       <div class="row align-items-center mt-2 mb-2">
         <div class="col-sm-12 col-md-3 h5">
-          Главный офис:
+          Навык:
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <b-form-select
+            v-model="mainSkill"
+            :options="mainSkillOptions"
+            size="md"
+            class="mt-1"
+          />
+        </div>
+      </div>
+
+      <div class="row align-items-center mt-2 mb-2">
+        <div class="col-sm-12 col-md-3 h5">
+          Доп. навыки:
         </div>
         <div class="col-sm-12 col-md-4">
           <b-form-group>
             <v-select
-              v-model="city"
+              v-model="secondSkill"
               multiple
               :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
               label="title"
-              :options="cityOption"
+              :options="secondSkillOption"
             />
           </b-form-group>
         </div>
@@ -257,48 +272,26 @@
 
       <div class="row align-items-center mt-2 mb-2">
         <div class="col-sm-12 col-md-3 h5">
-          Год основания:
+          Язык:
         </div>
         <div class="col-sm-12 col-md-4">
-          <b-form-group
-            label-for="yearInput"
-            class="mb-0"
-          >
-            <b-form-input
-              id="yearInput"
-              v-model="profileInfo.yearInput"
-              placeholder="Почта"
-              class="w-100"
-            />
-          </b-form-group>
-        </div>
-      </div>
-
-      <div class="row align-items-center mt-2 mb-2">
-        <div class="col-sm-12 col-md-3 h5">
-          Количество персонала:
-        </div>
-        <div class="col-sm-12 col-md-4">
-          <vue-slider
-            v-model="staff"
-            :direction="direction"
-            :min="min"
-            :max="max"
+          <b-form-select
+            v-model="language"
+            :options="languageOptions"
+            size="md"
+            class="mt-1"
           />
-          <span>От {{ staff[0] }} до {{ staff[1] }}
-          </span>
         </div>
       </div>
 
       <div class="row align-items-center mt-2 mb-2 border-bottom pb-4">
-        <div class="col-sm-12 col-md-3 h5">
-          О работодателе:
-        </div>
-        <div class="col-sm-12 col-md-7">
-          <b-form-textarea
-            id="textarea-plaintext"
-            :value="newText"
-            rows="3"
+        <div class="col-sm-12 col-md-3 h5"></div>
+        <div class="col-sm-12 col-md-4">
+          <b-form-select
+            v-model="languageSkill"
+            :options="languageSkillOptions"
+            size="md"
+            class="mt-1"
           />
         </div>
       </div>
@@ -309,14 +302,14 @@
           variant="primary"
           class="mr-3"
         >
-          Подтвердить работодателя
+          Подтвердить кандидата
         </b-button>
         <b-button
           v-ripple.400="'rgba(113, 102, 240, 0.15)'"
           variant="outline-primary"
           class="mr-3"
         >
-          Заблокировать работодателя
+          Заблокировать кандидата
         </b-button>
       </div>
     </b-card>
@@ -325,13 +318,11 @@
 
 <script>
 import {
-  BCard, BFormInput, BFormGroup, BFormSelect, BFormTextarea, BButton, BFormRadio,
+  BCard, BFormInput, BFormGroup, BFormSelect, BButton, BFormRadio,
 } from 'bootstrap-vue'
 import flatPickr from 'vue-flatpickr-component'
 import { ref } from '@vue/composition-api'
 import vSelect from 'vue-select'
-import VueSlider from 'vue-slider-component'
-import store from '@/store/index'
 import Ripple from 'vue-ripple-directive'
 import AvatarSelector from '../components/AvatarSelector.vue'
 
@@ -343,8 +334,6 @@ export default {
     BFormInput,
     BFormSelect,
     vSelect,
-    VueSlider,
-    BFormTextarea,
     BButton,
     BFormRadio,
     flatPickr,
@@ -359,34 +348,44 @@ export default {
 
       Selected: 'A',
 
-      staff: [100, 500],
-      min: 1,
-      max: 1000,
-      dir: 'ltr',
-
-      country: null,
-      countryOptions: [
-        { text: 'Украина' },
-        { text: 'Россия' },
+      level: 'junior',
+      levelOptions: [
+        { value: 'trainee', text: 'Trainee' },
+        { value: 'junior', text: 'Junior' },
+        { value: 'middle', text: 'Middle' },
+        { value: 'senior', text: 'Senior' },
       ],
 
-      city: { title: 'Харьков' },
-      cityOption: [{ title: 'Харьков' }, { title: 'Киев' }, { title: 'Львов' }, { title: 'Одесса' }, { title: 'Днепр' }, { title: 'Запорожье' }, { title: 'Кривой Рог' }, { title: 'Николаев' }, { title: 'Мариуполь' }, { title: 'Винница' }, { title: 'Херсон' }, { title: 'Чернигов' }, { title: 'Полтава' }, { title: 'Чекассы' }, { title: 'Хмельницкий' }, { title: 'Черновцы' }, { title: 'Житомир' }, { title: 'Сумы' }, { title: 'Ровно' }, { title: 'Ивано-Франковск' }, { title: 'Тернополь' }, { title: 'Луцк' }, { title: 'Ужгород' }],
+      mainSkill: 'javascript',
+      mainSkillOptions: [
+        { value: 'javascript', text: 'JavaScript' },
+        { value: 'java', text: 'Java' },
+        { value: 'c++', text: 'C++' },
+        { value: 'php', text: 'PHP' },
+        { value: 'markup', text: 'HTML/CSS' },
+      ],
 
-      newText: 'EPAM Systems — американская ИТ-компания, основанная в 1993 году. Крупнейший мировой производитель заказного программного обеспечения, специалист по консалтингу, резидент Белорусского парка высоких технологий. Штаб-квартира компании расположена в Ньютауне, штат Пенсильвания, а её отделения представлены более чем в 30 странах мира.',
+      secondSkill: [{ title: 'Node.js' }, { title: 'Vue.js' }],
+      secondSkillOption: [{ title: 'Node.js' }, { title: 'React' }, { title: 'Angular' }, { title: 'Vue.js' }, { title: 'JQuery' }, { title: 'Backbone.js' }, { title: 'Ember.js' }, { title: 'Meteor' }, { title: 'Polymer' }, { title: 'Aurelia' }],
+
+      language: 'en',
+      languageOptions: [
+        { value: 'en', text: 'Английский' },
+        { value: 'ge', text: 'Немецкий' },
+        { value: 'pu', text: 'Португальский' },
+        { value: 'fr', text: 'Французкий' },
+        { value: 'pl', text: 'Польский' },
+      ],
+
+      languageSkill: 'preinte',
+      languageSkillOptions: [
+        { value: 'elementary', text: 'Elementary' },
+        { value: 'preinte', text: 'Pre-Inretmediate' },
+        { value: 'inte', text: 'Inretmediate' },
+        { value: 'upper', text: 'Upper Inretmediate' },
+        { value: 'advanced', text: 'Advanced' },
+      ],
     }
-  },
-  computed: {
-    direction() {
-      if (store.state.appConfig.isRTL) {
-        // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-        this.dir = 'rtl'
-        return this.dir
-      }
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.dir = 'ltr'
-      return this.dir
-    },
   },
   setup() {
     const profileInfo = ref({
@@ -409,7 +408,6 @@ export default {
 
 <style lang="scss">
     @import '@core/scss/vue/libs/vue-select.scss';
-    @import '@core/scss/vue/libs/vue-slider.scss';
     @import '@core/scss/vue/libs/vue-flatpicker.scss';
 </style>
 

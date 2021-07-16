@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="admins">
-      <p class="text-uppercase">
+      <p class="text-uppercase pl-1">
         Администраторы</p>
       <b-button
         v-ripple.400="'rgba(113, 102, 240, 0.15)'"
@@ -61,41 +61,6 @@
           </b-badge>
         </span>
 
-        <!-- Column: Action -->
-        <!--
-        <span v-else-if="props.column.field === 'action'">
-          <span>
-            <b-dropdown
-              variant="link"
-              toggle-class="text-decoration-none"
-              no-caret
-            >
-              <template v-slot:button-content>
-                <feather-icon
-                  icon="MoreVerticalIcon"
-                  size="16"
-                  class="text-body align-middle mr-25"
-                />
-              </template>
-              <b-dropdown-item>
-                <feather-icon
-                  icon="Edit2Icon"
-                  class="mr-50"
-                />
-                <span>Edit</span>
-              </b-dropdown-item>
-              <b-dropdown-item>
-                <feather-icon
-                  icon="TrashIcon"
-                  class="mr-50"
-                />
-                <span>Delete</span>
-              </b-dropdown-item>
-            </b-dropdown>
-          </span>
-        </span>
-        -->
-
         <!-- Column: Common -->
         <span v-else>
           {{ props.formattedRow[props.column.field] }}
@@ -107,8 +72,8 @@
         slot="pagination-bottom"
         slot-scope="props"
       >
-        <div class="choice">
-          <div class="choice__delete">
+        <div class="d-flex justify-content-between align-items-center flex-wrap mt-1">
+          <div class="text-nowrap mt-1">
             <b-button
               v-ripple.400="'rgba(113, 102, 240, 0.15)'"
               variant="flat-secondary"
@@ -119,15 +84,15 @@
                 size="30"
               />
             </b-button>
-            <p class="choice__numbers">
+            <p class="d-inline-block pl-1 mb-0">
               Выбрано: <span> {{ selectedRows.length }} </span></p>
           </div>
           <!-- buttoms -->
-          <div class="admin-btn">
+          <div class="mt-1">
             <b-button
               v-ripple.400="'rgba(113, 102, 240, 0.15)'"
               variant="outline-secondary"
-              class="admin-btn__button"
+              class="mr-1"
             >
               Отмена
             </b-button>
@@ -263,10 +228,6 @@ export default {
             placeholder: 'Search Date',
           },
         },
-        /* {
-          label: 'История',
-          field: 'action',
-        }, */
       ],
       rows: [],
       searchTerm: '',
@@ -329,7 +290,6 @@ export default {
     justify-content: space-between;
     border-radius: 4px;
     margin-bottom: 20px;
-    padding: 0 20px;
     align-items: center;
     color: #fff;
     background: linear-gradient(118deg, #7367f0, rgba(115, 103, 240, 0.7));
@@ -337,7 +297,7 @@ export default {
     p{
       margin: 12px 0;
     }
-}
+  }
   .admins__btn{
     position: relative;
     padding-left: 20px;
@@ -373,22 +333,6 @@ export default {
 </style>
 
 <style scoped lang="scss">
-  .choice{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__numbers{
-      display: inline-block;
-      padding: 0 0 0 10px;
-    }
-  }
-  .admin-btn{
-    margin-top: 20px;
-    text-align: right;
-  }
-  .admin-btn__button{
-    margin-right: 15px;
-  }
   .btn-flat-secondary:hover:not(.disabled):not(:disabled) {
     background-color: unset;
   }

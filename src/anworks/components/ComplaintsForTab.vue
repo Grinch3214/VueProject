@@ -19,7 +19,7 @@
       <div class="col-1 h5">
         <span>1</span>
       </div>
-      <div class="d-flex align-items-center col-3 p-1">
+      <div class="d-flex align-items-center col-8 col-md-3 p-1">
         <b-avatar
           size="70px"
           :src="require('@/assets/images/avatars/cat_avatar.jpg')"
@@ -29,10 +29,10 @@
           <small class="text-muted d-block">ID123456</small>
         </p>
       </div>
-      <div class="col-2">
+      <div class="col-12 col-md-2 mb-1 mb-md-0 text-right text-md-left">
         <span>15.06.2021</span>
       </div>
-      <div class="col-6">
+      <div class="col-12 col-md-6 pb-1">
         <app-collapse
           accordion
           :type="collapseType"
@@ -50,9 +50,9 @@
 
     <div class="border-bottom row align-items-center">
       <div class="col-1 h5">
-        <span>2</span>
+        <span>1</span>
       </div>
-      <div class="d-flex align-items-center col-3 p-1">
+      <div class="d-flex align-items-center col-8 col-md-3 p-1">
         <b-avatar
           size="70px"
           :src="require('@/assets/images/avatars/cat_avatar.jpg')"
@@ -62,10 +62,10 @@
           <small class="text-muted d-block">ID123456</small>
         </p>
       </div>
-      <div class="col-2">
+      <div class="col-12 col-md-2 mb-1 mb-md-0 text-right text-md-left">
         <span>15.06.2021</span>
       </div>
-      <div class="col-6">
+      <div class="col-12 col-md-6 pb-1">
         <app-collapse
           accordion
           :type="collapseType"
@@ -83,9 +83,9 @@
 
     <div class="border-bottom row align-items-center">
       <div class="col-1 h5">
-        <span>3</span>
+        <span>1</span>
       </div>
-      <div class="d-flex align-items-center col-3 p-1">
+      <div class="d-flex align-items-center col-8 col-md-3 p-1">
         <b-avatar
           size="70px"
           :src="require('@/assets/images/avatars/cat_avatar.jpg')"
@@ -95,10 +95,10 @@
           <small class="text-muted d-block">ID123456</small>
         </p>
       </div>
-      <div class="col-2">
+      <div class="col-12 col-md-2 mb-1 mb-md-0 text-right text-md-left">
         <span>15.06.2021</span>
       </div>
-      <div class="col-6">
+      <div class="col-12 col-md-6 pb-1">
         <app-collapse
           accordion
           :type="collapseType"

@@ -5,7 +5,7 @@
       @submit.prevent
     >
       <b-row>
-        <b-col md="4">
+        <b-col lg="4">
           <b-form-group
             label="Имя"
             label-for="mcFirstName"
@@ -18,8 +18,8 @@
           </b-form-group>
         </b-col>
         <b-col
-          md="4"
-          offset-md="1"
+          lg="4"
+          offset-lg="1"
         >
           <b-form-group
             label="Дата рождения"
@@ -34,7 +34,7 @@
         </b-col>
 
         <b-col
-          md="4"
+          lg="4"
         >
           <b-form-group
             label="ID пользователя"
@@ -50,8 +50,8 @@
         </b-col>
 
         <b-col
-          md="4"
-          offset-md="1"
+          lg="4"
+          offset-lg="1"
         >
           <b-form-group
             label="Дата регистрации"
@@ -65,14 +65,14 @@
           </b-form-group>
         </b-col>
 
-        <b-col cols="4">
+        <b-col lg="4">
           <b-form-group>
             <p>Пол</p>
             <b-form-radio
               v-model="Selected"
               name="gender-user"
               value="A"
-              class="d-inline-block mr-2"
+              class="d-inline-block mr-2 mb-1"
             >
               Мужской
             </b-form-radio>
@@ -80,7 +80,7 @@
               v-model="Selected"
               name="gender-user"
               value="B"
-              class="d-inline-block mr-2"
+              class="d-inline-block mr-2 mb-1"
             >
               Женский
             </b-form-radio>
@@ -88,7 +88,7 @@
               v-model="Selected"
               name="gender-user"
               value="С"
-              class="d-inline-block mr-2"
+              class="d-inline-block mr-2 mb-1"
             >
               Другой
             </b-form-radio>
@@ -96,8 +96,8 @@
         </b-col>
 
         <b-col
-          cols="4"
-          offset-md="1"
+          lg="4"
+          offset-lg="1"
         >
           <b-form-group>
             <p>Активность</p>
@@ -123,7 +123,7 @@
       </b-row>
 
       <b-row>
-        <b-col md="4">
+        <b-col lg="4">
           <span class="input__text">Навыки
           </span>
           <b-form-group>
@@ -137,8 +137,8 @@
           </b-form-group>
         </b-col>
         <b-col
-          md="4"
-          offset-md="1"
+          lg="4"
+          offset-lg="1"
         >
           <b-form-group>
             <span class="input__text">Статус</span>
@@ -152,7 +152,7 @@
         </b-col>
 
         <b-col
-          md="4"
+          lg="4"
         >
           <span class="input__text">Дополнительные навыки
           </span>
@@ -168,8 +168,8 @@
         </b-col>
 
         <b-col
-          md="4"
-          offset-md="1"
+          lg="4"
+          offset-lg="1"
         >
           <span class="input__text">Канал Привлечения
           </span>
@@ -186,7 +186,7 @@
         </b-col>
 
         <b-col
-          md="4"
+          lg="4"
         >
           <b-form-group>
             <span class="input__text">Уровень</span>

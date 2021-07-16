@@ -1,12 +1,18 @@
 <template>
   <div class="col-xl-4">
 
-    <div class="admins">
-      <p class="text-uppercase">Фильтры
+    <div
+      class="admins pointer"
+      @click="isActive = !isActive"
+    >
+      <p class="text-uppercase pointer">Фильтры
       </p>
     </div>
 
-    <div class="card pl-1 pr-1">
+    <div
+      class="card pl-1 pr-1 toggle__filters"
+      :class="{active: isActive}"
+    >
 
       <filters-save-main />
 
@@ -34,7 +40,7 @@
 
       <filters-channel-attraction />
 
-      <div class="text-center mb-3">
+      <div class="text-center pb-3">
         <b-button
           v-ripple.400="'rgba(113, 102, 240, 0.15)'"
           variant="outline-primary"
@@ -89,9 +95,36 @@ export default {
   directives: {
     Ripple,
   },
+  data() {
+    return {
+      isActive: false,
+    }
+  },
 }
 </script>
 
 <style lang="scss">
-
+  .admins{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(118deg, #7367f0, rgba(115, 103, 240, 0.7));
+    box-shadow: 0px 0px 6px 1px rgb(115 103 240 / 60%);
+    p{
+      margin: 12px 0;
+    }
+  }
+  .toggle__filters {
+    display: block;
+  }
+  .toggle__filters.active {
+    display: none;
+  }
+  .pointer{
+    cursor: pointer;
+  }
 </style>

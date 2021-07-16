@@ -12,6 +12,7 @@
     </div>
     <!-- table -->
     <b-table
+      responsive
       :striped="striped"
       :bordered="bordered"
       :borderless="borderless"
@@ -26,13 +27,16 @@
       :fields="fields"
       :head-variant="headVariant"
       :table-variant="tableVariant"
+      :current-page="currentPage"
+      :per-page="perPage"
       class="mt-2"
     />
-    <div class="pl-2 pr-2 mt-2 d-flex justify-content-between align-items-center">
+    <div class="pl-2 pr-2 mt-2 d-flex justify-content-between align-items-center flex-wrap">
       <p class="text-black-50">Действий <span>5 из 47</span></p>
       <b-pagination
         v-model="currentPage"
-        :total-rows="rows"
+        :total-rows="totalRows"
+        :per-page="perPage"
         first-number
         last-number
         prev-class="prev-item"
@@ -68,8 +72,8 @@ export default {
   data() {
     return {
       currentPage: 1,
-      perPage: 1,
-      rows: 100,
+      perPage: 3,
+      totalRows: 1,
       fields: ['Действие', 'Время', 'Дата', 'IP'],
       items: [
         {
@@ -118,6 +122,10 @@ export default {
       tableVariant: 'none',
       noCollapse: false,
     }
+  },
+  mounted() {
+    // Set the initial number of items
+    this.totalRows = this.items.length
   },
 }
 </script>

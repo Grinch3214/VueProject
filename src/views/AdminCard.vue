@@ -1,14 +1,12 @@
 <template>
   <div class="card bg-white p-2">
-    <p class="h4">
-      Мария Иванова</p>
     <avatar-selector />
     <cards-name-login />
     <table-for-admins />
 
     <!-- submit and reset -->
-    <div class=" mt-2 d-flex justify-content-between">
-      <div>
+    <div class="mt-2 d-sm-flex justify-content-between flex-wrap">
+      <div class="mb-2">
         <b-button
           v-ripple.400="'rgba(255, 255, 255, 0.15)'"
           type="submit"
@@ -21,6 +19,7 @@
           v-ripple.400="'rgba(186, 191, 199, 0.15)'"
           type="reset"
           variant="outline-primary"
+          class="mr-1"
         >
           Отмена
         </b-button>

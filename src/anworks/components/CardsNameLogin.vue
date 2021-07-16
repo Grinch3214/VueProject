@@ -63,14 +63,16 @@
           </b-form-group>
         </b-col>
 
-        <b-col cols="4">
+        <b-col
+          md="4"
+        >
           <b-form-group>
             <p>Статус</p>
             <b-form-radio
               v-model="Selected"
               name="some-radios"
               value="A"
-              class="d-inline-block mr-2"
+              class="d-inline-block mr-2 mb-2"
             >
               Активен
             </b-form-radio>
@@ -86,7 +88,7 @@
         </b-col>
 
         <b-col
-          cols="4"
+          md="4"
           offset-md="1"
         >
           <b-form-group>
@@ -95,7 +97,7 @@
               v-model="Selected1"
               name="some-radios1"
               value="C"
-              class="d-inline-block mr-2"
+              class="d-inline-block mr-2 mb-2"
             >
               Админ
             </b-form-radio>
