@@ -1,8 +1,9 @@
 <template>
   <div>
     <b-form-group
-      label="Date"
+      label="Дата"
       label-for="date"
+      class="mt-1"
     >
       <cleave
         id="date"

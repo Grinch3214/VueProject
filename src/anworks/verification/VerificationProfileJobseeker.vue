@@ -296,18 +296,18 @@
         </div>
       </div>
 
-      <div class="mt-5 mb-2">
+      <div class="mt-2 mt-md-5 mb-2 text-center text-md-left">
         <b-button
           v-ripple.400="'rgba(255, 255, 255, 0.15)'"
           variant="primary"
-          class="mr-3"
+          class="mr-3 mb-1"
         >
           Подтвердить кандидата
         </b-button>
         <b-button
           v-ripple.400="'rgba(113, 102, 240, 0.15)'"
           variant="outline-primary"
-          class="mr-3"
+          class="mr-3 mb-1"
         >
           Заблокировать кандидата
         </b-button>

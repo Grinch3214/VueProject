@@ -3,13 +3,6 @@
     <div class="admins">
       <p class="text-uppercase">
         Работодатели</p>
-      <b-button
-        v-ripple.400="'rgba(113, 102, 240, 0.15)'"
-        class="admins__btn"
-        variant="flat-primary"
-      >
-        Добавить
-      </b-button>
     </div>
 
     <!-- table -->
@@ -124,11 +117,10 @@
 
 <script>
 import {
-  BAvatar, BPagination, BFormSelect, BButton,
+  BAvatar, BPagination, BFormSelect,
 } from 'bootstrap-vue'
 import { VueGoodTable } from 'vue-good-table'
 import store from '@/store/index'
-import Ripple from 'vue-ripple-directive'
 
 export default {
   components: {
@@ -137,10 +129,6 @@ export default {
     // BBadge,
     BPagination,
     BFormSelect,
-    BButton,
-  },
-  directives: {
-    Ripple,
   },
   data() {
     return {
@@ -234,35 +222,6 @@ export default {
       margin: 12px 0;
     }
 }
-  .admins__btn{
-    position: relative;
-    padding-left: 20px;
-    cursor: pointer;
-    color: #fff;
-    &::before{
-      content: '';
-      position: absolute;
-      top: 6px;
-      left: 0;
-      width: 12px;
-      height: 12px;
-      background: transparent;
-      border-bottom: 2px solid #fff;
-    }
-    &::after{
-      content: '';
-      position: absolute;
-      top: 11px;
-      left: -5px;
-      width: 12px;
-      height: 12px;
-      background: transparent;
-      border-right: 2px solid #fff;
-    }
-    &:hover, &:focus{
-      color: #fff;
-    }
-  }
   .pointer{
     cursor: pointer;
   }

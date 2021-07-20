@@ -1,5 +1,5 @@
 <template>
-  <div class="card bg-white p-5 m-5">
+  <div class="card bg-white p-1 p-md-5 m-0 m-md-5">
     <b-tabs pills>
       <b-tab>
         <template #title>
@@ -89,28 +89,29 @@
             blank-color="#ccc"
             fluid
             alt="placeholder"
-            class="pr-2"
+            class="pr-2 mb-1"
           />
           <b-img
             :src="require('@/assets/images/elements/test_2.jpg')"
             blank-color="#ccc"
             fluid
             alt="placeholder"
-            class="pr-2"
+            class="pr-2 mb-1"
           />
         </div>
 
-        <div class="mt-4">
+        <div class="mt-3 text-center text-sm-left">
           <b-button
             v-ripple.400="'rgba(255, 255, 255, 0.15)'"
             variant="primary"
+            class="mb-1"
           >
             Оставить комментарий
           </b-button>
           <b-button
             v-ripple.400="'rgba(113, 102, 240, 0.15)'"
             variant="outline-primary"
-            class="ml-2"
+            class="ml-2 mr-2 mb-1"
           >
             Закрыть
           </b-button>

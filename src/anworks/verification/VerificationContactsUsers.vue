@@ -16,13 +16,13 @@
     <div class="row ml-25 mr-25 text-darken">
       <div class="col-lg-6 col-sm-12">
         <div class="row">
-          <div class="col-7 text-uppercase h5 font-weight-bolder pt-1 pb-1 bg-secondary bg-lighten-5 mb-0">
+          <div class="col-md-7 col-12 text-uppercase h5 font-weight-bolder pt-1 pb-1 bg-secondary bg-lighten-5 mb-0">
             Рекрутер</div>
-          <div class="col-5 text-uppercase h5 font-weight-bolder pt-1 pb-1 bg-secondary bg-lighten-5 mb-0 text-nowrap">
+          <div class="col-5 text-uppercase h5 font-weight-bolder pt-1 pb-1 bg-secondary bg-lighten-5 mb-0 text-nowrap d-none d-md-block">
             Статус рекрутера</div>
         </div>
         <div class="row bg-white pt-1">
-          <div class="col-7">
+          <div class="col-md-7 col-12">
             <div class="pb-3">
               <p class="h4">
                 Иван Иванов</p>
@@ -58,7 +58,7 @@
                 Иван Иванов</p>
             </div>
           </div>
-          <div class="col-5">
+          <div class="col-md-5 col-12 mb-2 mb-md-0">
             <b-form-select
               v-model="selected"
               :options="options"
@@ -69,13 +69,13 @@
 
       <div class="col-lg-6 col-sm-12">
         <div class="row">
-          <div class="col-7 text-uppercase h5 font-weight-bolder pt-1 pb-1 bg-secondary bg-lighten-5 mb-0">
+          <div class="col-md-7 col-12 text-uppercase h5 font-weight-bolder pt-1 pb-1 bg-secondary bg-lighten-5 mb-0">
             Соискатель</div>
-          <div class="col-5 text-uppercase h5 font-weight-bolder pt-1 pb-1 bg-secondary bg-lighten-5 mb-0 text-nowrap">
+          <div class="col-5 text-uppercase h5 font-weight-bolder pt-1 pb-1 bg-secondary bg-lighten-5 mb-0 text-nowrap d-none d-md-block">
             Статус соискателя</div>
         </div>
         <div class="row bg-white pt-1">
-          <div class="col-7">
+          <div class="col-md-7 col-12">
             <div class="pb-3">
               <p class="h4">
                 Иван Иванов</p>
@@ -111,7 +111,7 @@
                 Иван Иванов</p>
             </div>
           </div>
-          <div class="col-5">
+          <div class="col-12 col-md-5">
             <b-form-select
               v-model="selected1"
               :options="options"

@@ -91,7 +91,7 @@
               v-model="Gender"
               name="gender-user"
               value="A"
-              class="d-inline-block mr-2"
+              class="d-inline-block mr-2 pb-sm-0 pb-2"
             >
               Мужской
             </b-form-radio>
@@ -99,7 +99,7 @@
               v-model="Gender"
               name="gender-user"
               value="B"
-              class="d-inline-block mr-2"
+              class="d-inline-block mr-2 pb-sm-0 pb-2"
             >
               Женский
             </b-form-radio>
@@ -130,7 +130,7 @@
         </b-col>
 
         <b-col
-          cols="4"
+          md="4"
           offset-md="1"
         >
           <b-form-group>
@@ -156,8 +156,8 @@
 
       </b-row>
       <!-- submit and reset -->
-      <div class=" mt-5 d-flex justify-content-between col-9 pl-0">
-        <div>
+      <div class=" mt-4 d-flex justify-content-center justify-content-md-between col-12 col-md-9 pl-0 flex-wrap">
+        <div class="mb-1">
           <b-button
             v-ripple.400="'rgba(255, 255, 255, 0.15)'"
             type="submit"
@@ -170,6 +170,7 @@
             v-ripple.400="'rgba(186, 191, 199, 0.15)'"
             type="reset"
             variant="outline-primary"
+            class="mr-1"
           >
             Отмена
           </b-button>

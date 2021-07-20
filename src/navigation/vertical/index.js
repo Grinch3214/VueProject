@@ -29,9 +29,19 @@ export default [
     header: 'Верификация',
   },
   {
-    title: 'Verification',
+    title: 'Работодaтели',
     route: 'verification',
     icon: 'CheckIcon',
+  },
+  {
+    title: 'Контакты',
+    route: 'verification-employer-contact',
+    icon: 'PhoneIcon',
+  },
+  {
+    title: 'Соискaтели',
+    route: 'verification-jobseekers',
+    icon: 'UsersIcon',
   },
   {
     header: 'Финансы',

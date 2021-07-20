@@ -1,10 +1,14 @@
 <template>
-  <div class="card bg-white p-5">
+  <div class="card bg-white p-2 p-lg-5">
     <b-tabs pills>
-      <b-tab
-        title="Основная информация"
-        active
-      >
+      <b-tab active>
+        <template #title>
+          <feather-icon
+            icon="UserIcon"
+            class="mr-50 d-inline d-sm-none"
+          />
+          <span class="d-none d-sm-inline">Основная информация</span>
+        </template>
         <b-card-text>
           <p class="h4">
             {{ 'name' }}</p>
@@ -23,7 +27,7 @@
             icon="PhoneIcon"
             class="mr-50"
           />
-          Контакты
+          <span class="d-none d-sm-inline">Контакты</span>
         </template>
         <b-card-text>
 
@@ -56,9 +60,9 @@
             icon="ThumbsDownIcon"
             class="mr-50"
             badge="2"
-            badge-classes="badge-danger badge-glow d-none"
+            badge-classes="badge-danger badge-glow"
           />
-          Жалобы
+          <span class="d-none d-sm-inline">Жалобы</span>
         </template>
         <b-card-text>
           <empty-complains-for-tab />
@@ -113,5 +117,10 @@ export default {
 }
 .badge.badge-up {
     top: -21px;
+}
+@media screen and (max-width: 575px) {
+  [dir=ltr] .badge.badge-up {
+    right: -30px;
+  }
 }
 </style>

@@ -158,18 +158,18 @@
         </div>
       </div>
 
-      <div class="mt-5 mb-2">
+      <div class="mt-5 mb-2 text-center text-md-left">
         <b-button
           v-ripple.400="'rgba(255, 255, 255, 0.15)'"
           variant="primary"
-          class="mr-3"
+          class="mr-1 mr-md-3 mb-1 mb-md-0"
         >
           Подтвердить работодателя
         </b-button>
         <b-button
           v-ripple.400="'rgba(113, 102, 240, 0.15)'"
           variant="outline-primary"
-          class="mr-3"
+          class="mr-1 mr-md-3 mb-1 mb-md-0"
         >
           Заблокировать работодателя
         </b-button>

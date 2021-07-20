@@ -3,13 +3,6 @@
     <div class="admins">
       <p class="text-uppercase">Жалобы
       </p>
-      <b-button
-        v-ripple.400="'rgba(113, 102, 240, 0.15)'"
-        class="admins__btn"
-        variant="flat-primary"
-      >
-        Добавить
-      </b-button>
     </div>
 
     <!-- table -->
@@ -85,8 +78,8 @@
         slot="pagination-bottom"
         slot-scope="props"
       >
-        <div class="choice">
-          <div class="choice__delete">
+        <div class="d-flex justify-content-between align-items-center flex-wrap mt-1">
+          <div class="text-nowrap mt-1">
             <b-button
               v-ripple.400="'rgba(113, 102, 240, 0.15)'"
               variant="flat-secondary"
@@ -97,16 +90,17 @@
                 size="30"
               />
             </b-button>
-            <p class="choice__numbers">
+            <p class="d-inline-block pl-1 mb-0">
               Выбрано: <span> {{ selectedRows.length }} </span></p>
           </div>
-          <!-- buttons -->
-          <div class="admin-btn">
+          <!-- buttoms -->
+          <div class="mt-1">
             <b-dropdown
               id="dropdown-admins"
               v-ripple.400="'rgba(255, 255, 255, 0.15)'"
               text="Удалить"
               variant="outline-secondary"
+              class="mr-1"
             >
               <b-dropdown-item>Действие</b-dropdown-item>
               <b-dropdown-item>Просмотреть</b-dropdown-item>
@@ -114,7 +108,6 @@
             <b-button
               v-ripple.400="'rgba(113, 102, 240, 0.15)'"
               variant="outline-secondary"
-              class="admin-btn__button ml-1"
             >
               Применить
             </b-button>
@@ -343,41 +336,5 @@ export default {
   }
   .pointer{
     cursor: pointer;
-  }
-</style>
-
-<style scoped lang="scss">
-  .choice{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__numbers{
-      display: inline-block;
-      padding: 0 0 0 10px;
-    }
-  }
-  .admin-btn{
-    margin-top: 20px;
-    text-align: right;
-  }
-  .admin-btn__button{
-    margin-right: 15px;
-  }
-  .btn-flat-secondary:hover:not(.disabled):not(:disabled) {
-    background-color: unset;
-  }
-  .btn-flat-secondary:active,
-  .btn-flat-secondary.active,
-  .btn-flat-secondary:focus {
-    background-color: unset;
-  }
-    @media screen and (max-width: 425px) {
-    .choice {
-      display: block;
-    }
-    .admin-btn {
-      text-align: center;
-      margin-bottom: 15px;
-    }
   }
 </style>

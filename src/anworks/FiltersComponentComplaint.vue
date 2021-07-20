@@ -1,12 +1,18 @@
 <template>
   <div class="col-xl-4">
 
-    <div class="admins">
+    <div
+      class="admins pointer"
+      @click="isActive = !isActive"
+    >
       <p class="text-uppercase">Фильтры
       </p>
     </div>
 
-    <div class="card pl-1 pr-1">
+    <div
+      class="card pl-1 pr-1 toggle__filters"
+      :class="{active: isActive}"
+    >
 
       <filters-save-main />
 
@@ -22,7 +28,7 @@
 
       <filters-date />
 
-      <div class="text-center mb-3 mt-2">
+      <div class="text-center pb-3 mt-2">
         <b-button
           v-ripple.400="'rgba(113, 102, 240, 0.15)'"
           variant="outline-primary"
@@ -60,6 +66,11 @@ export default {
   directives: {
     Ripple,
   },
+  data() {
+    return {
+      isActive: false,
+    }
+  },
 }
 </script>
 
@@ -77,73 +88,14 @@ export default {
     p{
       margin: 12px 0;
     }
-}
-  .admins__btn{
-    position: relative;
-    padding-left: 20px;
-    cursor: pointer;
-    color: #fff;
-    &::before{
-      content: '';
-      position: absolute;
-      top: 6px;
-      left: 0;
-      width: 12px;
-      height: 12px;
-      background: transparent;
-      border-bottom: 2px solid #fff;
-    }
-    &::after{
-      content: '';
-      position: absolute;
-      top: 11px;
-      left: -5px;
-      width: 12px;
-      height: 12px;
-      background: transparent;
-      border-right: 2px solid #fff;
-    }
-    &:hover, &:focus{
-      color: #fff;
-    }
+  }
+  .toggle__filters {
+    display: block;
+  }
+  .toggle__filters.active {
+    display: none;
   }
   .pointer{
     cursor: pointer;
-  }
-</style>
-
-<style scoped lang="scss">
-  .choice{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__numbers{
-      display: inline-block;
-      padding: 0 0 0 10px;
-    }
-  }
-  .admin-btn{
-    margin-top: 20px;
-    text-align: right;
-  }
-  .admin-btn__button{
-    margin-right: 15px;
-  }
-  .btn-flat-secondary:hover:not(.disabled):not(:disabled) {
-    background-color: unset;
-  }
-  .btn-flat-secondary:active,
-  .btn-flat-secondary.active,
-  .btn-flat-secondary:focus {
-    background-color: unset;
-  }
-    @media screen and (max-width: 425px) {
-    .choice {
-      display: block;
-    }
-    .admin-btn {
-      text-align: center;
-      margin-bottom: 15px;
-    }
   }
 </style>
