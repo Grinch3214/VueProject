@@ -24,7 +24,7 @@
           <info-job-seeker-user />
 
           <!-- submit and reset -->
-          <div class=" mt-2 mt-lg-5 d-flex justify-content-between flex-wrap col-lg-9 pl-0">
+          <div class="mt-2 mt-lg-5 d-flex justify-content-sm-between justify-content-center flex-wrap col-lg-9 pl-0">
             <div class="mb-1">
               <b-button
                 v-ripple.400="'rgba(255, 255, 255, 0.15)'"
@@ -84,7 +84,7 @@
         </template>
         <b-card-text>
 
-          <contact-job-seeker-user />
+          <contact-tab-user />
 
           <!-- buttons -->
           <div class="mt-4">
@@ -117,7 +117,7 @@
           <span class="d-none d-sm-inline">Жалобы</span>
         </template>
         <b-card-text>
-          <complaints-job-seeker />
+          <complaints-for-tab />
         </b-card-text>
       </b-tab>
     </b-tabs>
@@ -131,8 +131,8 @@ import {
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import InfoJobSeekerUser from '@/anworks/jobSeekers/InfoJobSeekerUser.vue'
-import ContactJobSeekerUser from '@/anworks/components/ContactJobSeekerUser.vue'
-import ComplaintsJobSeeker from '@/anworks/components/ComplaintsForTab.vue'
+import ContactTabUser from '@/anworks/components/ContactTabUser.vue'
+import ComplaintsForTab from '@/anworks/components/ComplaintsForTab.vue'
 
 export default {
   components: {
@@ -143,8 +143,8 @@ export default {
     BTabs,
     BAvatar,
     InfoJobSeekerUser,
-    ContactJobSeekerUser,
-    ComplaintsJobSeeker,
+    ContactTabUser,
+    ComplaintsForTab,
   },
   directives: {
     'b-modal': VBModal,

@@ -1,10 +1,16 @@
 <template>
-  <div class="card bg-white p-5">
+  <div class="card bg-white p-2 p-lg-5">
     <b-tabs pills>
       <b-tab
-        title="Основная информация"
         active
       >
+        <template #title>
+          <feather-icon
+            icon="UserIcon"
+            class="mr-50 d-inline d-sm-none"
+          />
+          <span class="d-none d-sm-inline">Основная информация</span>
+        </template>
         <b-card-text>
           <p class="h4">
             {{ 'name' }}</p>
@@ -23,19 +29,19 @@
             icon="PhoneIcon"
             class="mr-50"
           />
-          Контакты
+          <span class="d-none d-sm-inline">Контакты</span>
         </template>
         <b-card-text>
 
-          <contact-job-seeker-user />
+          <contact-tab-user />
 
           <!-- buttons -->
-          <div class="mt-4">
+          <div class="mt-2">
             <b-button
               v-ripple.400="'rgba(255, 255, 255, 0.15)'"
               type="submit"
               variant="primary"
-              class="mr-1"
+              class="mr-1 mb-1"
             >
               Сохранить
             </b-button>
@@ -43,6 +49,7 @@
               v-ripple.400="'rgba(186, 191, 199, 0.15)'"
               type="reset"
               variant="outline-primary"
+              class="mb-1"
             >
               Отмена
             </b-button>
@@ -56,12 +63,12 @@
             icon="ThumbsDownIcon"
             class="mr-50"
             badge="2"
-            badge-classes="badge-danger badge-glow d-none"
+            badge-classes="badge-danger badge-glow"
           />
-          Жалобы
+          <span class="d-none d-sm-inline">Жалобы</span>
         </template>
         <b-card-text>
-          <complaints-job-seeker />
+          <complaints-for-tab />
         </b-card-text>
       </b-tab>
     </b-tabs>
@@ -74,8 +81,8 @@ import {
   BCardText, BTab, BTabs, BAvatar, BButton,
 } from 'bootstrap-vue'
 import InfoEmployerUser from '@/anworks/employers/InfoEmployerUser.vue'
-import ContactJobSeekerUser from '@/anworks/components/ContactTabUser.vue'
-import ComplaintsJobSeeker from '@/anworks/components/ComplaintsForTab.vue'
+import ContactTabUser from '@/anworks/components/ContactTabUser.vue'
+import ComplaintsForTab from '@/anworks/components/ComplaintsForTab.vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
@@ -85,8 +92,8 @@ export default {
     BTabs,
     BAvatar,
     InfoEmployerUser,
-    ContactJobSeekerUser,
-    ComplaintsJobSeeker,
+    ContactTabUser,
+    ComplaintsForTab,
     BButton,
   },
   directives: {
@@ -113,5 +120,10 @@ export default {
 }
 .badge.badge-up {
     top: -21px;
+}
+@media screen and (max-width: 575px) {
+  [dir=ltr] .badge.badge-up {
+    right: -30px;
+  }
 }
 </style>

@@ -27,7 +27,7 @@
         </template>
         <b-card-text>
 
-          <contact-job-seeker-user />
+          <contact-tab-user />
 
           <!-- buttons -->
           <div class="mt-4">
@@ -74,7 +74,7 @@ import {
   BCardText, BTab, BTabs, BAvatar, BButton,
 } from 'bootstrap-vue'
 import InfoRecruiterUser from '@/anworks/components/InfoRecruiterUser.vue'
-import ContactJobSeekerUser from '@/anworks/components/ContactTabUser.vue'
+import ContactTabUser from '@/anworks/components/ContactTabUser.vue'
 import EmptyComplainsForTab from '@/anworks/components/EmptyComplainsForTab.vue'
 import Ripple from 'vue-ripple-directive'
 
@@ -85,7 +85,7 @@ export default {
     BTabs,
     BAvatar,
     InfoRecruiterUser,
-    ContactJobSeekerUser,
+    ContactTabUser,
     EmptyComplainsForTab,
     BButton,
   },

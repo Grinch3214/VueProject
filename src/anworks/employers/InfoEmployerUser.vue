@@ -50,7 +50,7 @@
         </b-col>
 
         <b-col
-          cols="4"
+          md="4"
           offset-md="1"
         >
           <b-form-group>
@@ -140,8 +140,8 @@
 
       </b-row>
       <!-- submit and reset -->
-      <div class=" mt-5 d-flex justify-content-between col-9 pl-0">
-        <div>
+      <div class="mt-2 mt-lg-5 d-flex justify-content-sm-between justify-content-center flex-wrap col-lg-9 pl-0">
+        <div class="mb-1">
           <b-button
             v-ripple.400="'rgba(255, 255, 255, 0.15)'"
             type="submit"
@@ -195,7 +195,7 @@
 
 <script>
 import {
-  BRow, BCol, BFormGroup, BFormInput, BFormRadio, BForm, BButton, BModal, VBModal,
+  BRow, BCol, BFormGroup, BFormInput, BFormRadio, BForm, BButton, BModal, VBModal, BCardText,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import vSelect from 'vue-select'
@@ -212,6 +212,7 @@ export default {
     vSelect,
     BButton,
     BModal,
+    BCardText,
   },
   directives: {
     Ripple,

@@ -50,7 +50,7 @@
 
     <div class="border-bottom row align-items-center">
       <div class="col-1 h5">
-        <span>1</span>
+        <span>2</span>
       </div>
       <div class="d-flex align-items-center col-8 col-md-3 p-1">
         <b-avatar
@@ -83,7 +83,7 @@
 
     <div class="border-bottom row align-items-center">
       <div class="col-1 h5">
-        <span>1</span>
+        <span>3</span>
       </div>
       <div class="d-flex align-items-center col-8 col-md-3 p-1">
         <b-avatar
