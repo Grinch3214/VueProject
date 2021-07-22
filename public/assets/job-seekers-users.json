@@ -6,7 +6,10 @@
         "skill": "JavaScript",
         "gender": "Мужской",
         "status": "Создан",
-        "activity": 1
+        "verification": 1,
+        "itSchool": "UIT School",
+        "profile": "27%",
+        "hired": 1
     },
     {
         "id": 2,
@@ -15,23 +18,34 @@
         "skill": "HTML",
         "gender": "Мужской",
         "status": "Нейтрален",
-        "activity": 2
-    },{
+        "verification": 2,
+        "itSchool": "UIT School",
+        "profile": "2%",
+        "hired": 2
+    },
+    {
         "id": 3,
         "fullName": "Анастасия Горбаченко",
         "date": "2021-06-25",
         "skill": "CSS",
         "gender": "Женский",
         "status": "В рейтинге",
-        "activity": 1
-    },{
+        "verification": 1,
+        "itSchool": "Lemon School",
+        "profile": "41%",
+        "hired": 3
+    },
+    {
         "id": 4,
         "fullName": "Алексей Пузич",
         "date": "2021-06-25",
         "skill": "Java",
         "gender": "Мужской",
         "status": "Ожидает",
-        "activity": 1
+        "verification": 1,
+        "itSchool": "Lemon School",
+        "profile": "87%",
+        "hired": 1
     },
     {
         "id": 5,
@@ -40,7 +54,10 @@
         "skill": "C++",
         "gender": "Женский",
         "status": "Нейтрален",
-        "activity": 1
+        "verification": 1,
+        "itSchool": "UIT School",
+        "profile": "65%",
+        "hired": 2
     },
     {
         "id": 6,
@@ -49,7 +66,10 @@
         "skill": "C#",
         "gender": "Женский",
         "status": "Ожидает",
-        "activity": 1
+        "verification": 1,
+        "itSchool": "UIT School",
+        "profile": "19%",
+        "hired": 1
     },
     {
         "id": 7,
@@ -58,6 +78,9 @@
         "skill": "JavaScript",
         "gender": "Мужской",
         "status": "В рейтинге",
-        "activity": 1
+        "verification": 1,
+        "itSchool": "UIT School",
+        "profile": "56%",
+        "hired": 3
     }
 ]

@@ -27,7 +27,7 @@ const router = new VueRouter({
     {
       path: '/job-seekers',
       name: 'job-seekers',
-      component: () => import('@/views/SecondPage.vue'),
+      component: () => import('@/views/JobSeekerPage.vue'),
       meta: {
         pageTitle: 'Пользователи',
         breadcrumb: [

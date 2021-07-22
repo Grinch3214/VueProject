@@ -47,10 +47,25 @@
           <span class="text-nowrap">{{ props.row.fullName }}</span>
         </div>
 
-        <!-- Column: Activity -->
-        <span v-else-if="props.column.field === 'activity'">
-          <b-badge :variant="activityVariant(props.row.activity)">
-            {{ activityText(props.row.activity) }}
+        <!-- Column: Verification -->
+        <span v-else-if="props.column.field === 'verification'">
+          <b-badge :variant="verificationVariant(props.row.verification)">
+            {{ verificationText(props.row.verification) }}
+          </b-badge>
+        </span>
+
+        <!-- Column: Profile -->
+        <span
+          v-else-if="props.column.field === 'profile'"
+          class="h2 text-primary text-center"
+        >
+          {{ props.row.profile }}
+        </span>
+
+        <!-- Column: Hired -->
+        <span v-else-if="props.column.field === 'hired'">
+          <b-badge :variant="hiredVariant(props.row.hired)">
+            {{ hiredText(props.row.hired) }}
           </b-badge>
         </span>
 
@@ -71,7 +86,10 @@
         </span>
 
         <!-- Column: Common -->
-        <span v-else>
+        <span
+          v-else
+          class="text-nowrap"
+        >
           {{ props.formattedRow[props.column.field] }}
         </span>
       </template>
@@ -234,14 +252,43 @@ export default {
           },
         },
         {
-          label: 'Активность',
-          field: 'activity',
+          label: 'Верификация',
+          field: 'verification',
           filterOptions: {
             enabled: true,
-            placeholder: 'Активность',
+            placeholder: 'Верификация',
             filterDropdownItems: [
-              { value: 1, text: 'Активен' },
+              { value: 1, text: 'Верифицирован' },
               { value: 2, text: 'Заблокирован' },
+            ],
+          },
+        },
+        {
+          label: 'Школа',
+          field: 'itSchool',
+          filterOptions: {
+            enabled: true,
+            placeholder: 'Школа',
+          },
+        },
+        {
+          label: 'Профиль',
+          field: 'profile',
+          filterOptions: {
+            enabled: true,
+            placeholder: 'Профиль',
+          },
+        },
+        {
+          label: 'Найм',
+          field: 'hired',
+          filterOptions: {
+            enabled: true,
+            placeholder: 'Найм',
+            filterDropdownItems: [
+              { value: 1, text: 'Нанят' },
+              { value: 2, text: 'Не Нанят' },
+              { value: 3, text: 'Нанят не через сервис' },
             ],
           },
         },
@@ -255,25 +302,48 @@ export default {
     }
   },
   computed: {
-    activityVariant() {
-      const activityColor = {
+    verificationVariant() {
+      const verificationColor = {
         /* eslint-disable key-spacing */
         1: 'light-success',
         2: 'light-danger',
         /* eslint-enable key-spacing */
       }
 
-      return activity => activityColor[activity]
+      return verification => verificationColor[verification]
     },
-    activityText() {
-      const activityText = {
+    verificationText() {
+      const verificationText = {
         /* eslint-disable key-spacing */
-        1: 'Активный',
+        1: 'Верифицирован',
         2: 'Заблокирован',
         /* eslint-enable key-spacing */
       }
 
-      return activity => activityText[activity]
+      return verification => verificationText[verification]
+    },
+
+    hiredVariant() {
+      const hiredColor = {
+        /* eslint-disable key-spacing */
+        1: 'light-info',
+        2: 'light-danger',
+        3: 'light-success',
+        /* eslint-enable key-spacing */
+      }
+
+      return hired => hiredColor[hired]
+    },
+    hiredText() {
+      const hiredText = {
+        /* eslint-disable key-spacing */
+        1: 'Нанят',
+        2: 'Не нанят',
+        3: 'Нанят не через сервис',
+        /* eslint-enable key-spacing */
+      }
+
+      return hired => hiredText[hired]
     },
 
     direction() {

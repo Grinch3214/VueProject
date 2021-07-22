@@ -139,4 +139,8 @@ export default {
 .horizontal-menu .navbar.header-navbar .navbar-container{
   padding: 0 2rem;
 }
+.horizontal-menu .header-navbar.navbar-horizontal ul#main-menu-navigation > li:first-child svg {
+      width: 20px;
+      height: 20px;
+}
 </style>
