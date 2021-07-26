@@ -67,20 +67,6 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/users-page',
-      name: 'users',
-      component: () => import('@/views/Users.vue'),
-      meta: {
-        pageTitle: 'Пользователи',
-        breadcrumb: [
-          {
-            text: 'Юзеры',
-            active: true,
-          },
-        ],
-      },
-    },
-    {
       path: '/verification-page',
       name: 'verification',
       component: () => import('@/views/Verification.vue'),
@@ -197,10 +183,10 @@ const router = new VueRouter({
       name: 'metrics',
       component: () => import('@/views/Metrics.vue'),
       meta: {
-        pageTitle: 'Metrics',
+        pageTitle: 'Метрики',
         breadcrumb: [
           {
-            text: 'Metrics',
+            text: 'Метрики работодателей',
             active: true,
           },
         ],
@@ -299,6 +285,20 @@ const router = new VueRouter({
         breadcrumb: [
           {
             text: 'Детальнее',
+            active: true,
+          },
+        ],
+      },
+    },
+    {
+      path: '/analitics-page',
+      name: 'analitics',
+      component: () => import('@/views/Analitics.vue'),
+      meta: {
+        pageTitle: 'Аналитика',
+        breadcrumb: [
+          {
+            text: 'Сквозная аналитика',
             active: true,
           },
         ],

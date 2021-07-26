@@ -69,7 +69,7 @@ export default [
         icon: 'TrendingUpIcon',
         children: [
           {
-            title: 'Metrics',
+            title: 'Метрики работодателей',
             route: 'metrics',
             icon: 'TrendingUpIcon',
           },
@@ -93,6 +93,18 @@ export default [
         title: 'Администраторы',
         route: 'home',
         icon: 'HomeIcon',
+      },
+    ],
+  },
+
+  {
+    header: 'Аналитика',
+    icon: 'TrendingUpIcon',
+    children: [
+      {
+        title: 'Сквозная аналитика',
+        route: 'analitics',
+        icon: 'TrendingUpIcon',
       },
     ],
   },

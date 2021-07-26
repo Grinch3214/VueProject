@@ -293,6 +293,14 @@ export default {
           },
         },
         {
+          label: 'Тест по hard skills',
+          field: 'skillTest',
+        },
+        {
+          label: 'Тест по иностранному',
+          field: 'languageTest',
+        },
+        {
           label: 'Жалобы',
           field: 'action',
         },
@@ -326,7 +334,7 @@ export default {
     hiredVariant() {
       const hiredColor = {
         /* eslint-disable key-spacing */
-        1: 'light-info',
+        1: 'light-primary',
         2: 'light-danger',
         3: 'light-success',
         /* eslint-enable key-spacing */
@@ -387,6 +395,9 @@ export default {
     p{
       margin: 12px 0;
     }
+}
+.vgt-table thead th {
+    vertical-align: middle;
 }
 </style>
 

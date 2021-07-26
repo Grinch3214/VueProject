@@ -9,7 +9,9 @@
         "verification": 1,
         "itSchool": "UIT School",
         "profile": "27%",
-        "hired": 1
+        "hired": 1,
+        "skillTest": "Сдан",
+        "languageTest": "Сдан"
     },
     {
         "id": 2,
@@ -21,7 +23,9 @@
         "verification": 2,
         "itSchool": "UIT School",
         "profile": "2%",
-        "hired": 2
+        "hired": 2,
+        "skillTest": "Не сдан",
+        "languageTest": "Не сдан"
     },
     {
         "id": 3,
@@ -33,7 +37,9 @@
         "verification": 1,
         "itSchool": "Lemon School",
         "profile": "41%",
-        "hired": 3
+        "hired": 3,
+        "skillTest": "Сдан",
+        "languageTest": "Сдан"
     },
     {
         "id": 4,
@@ -45,7 +51,9 @@
         "verification": 1,
         "itSchool": "Lemon School",
         "profile": "87%",
-        "hired": 1
+        "hired": 1,
+        "skillTest": "Сдан",
+        "languageTest": "Сдан"
     },
     {
         "id": 5,
@@ -57,7 +65,9 @@
         "verification": 1,
         "itSchool": "UIT School",
         "profile": "65%",
-        "hired": 2
+        "hired": 2,
+        "skillTest": "Сдан",
+        "languageTest": "Сдан"
     },
     {
         "id": 6,
@@ -69,7 +79,9 @@
         "verification": 1,
         "itSchool": "UIT School",
         "profile": "19%",
-        "hired": 1
+        "hired": 1,
+        "skillTest": "Сдан",
+        "languageTest": "Сдан"
     },
     {
         "id": 7,
@@ -81,6 +93,8 @@
         "verification": 1,
         "itSchool": "UIT School",
         "profile": "56%",
-        "hired": 3
+        "hired": 3,
+        "skillTest": "Сдан",
+        "languageTest": "Сдан"
     }
 ]
