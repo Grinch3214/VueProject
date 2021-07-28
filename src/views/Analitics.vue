@@ -10,21 +10,31 @@
       />
     </b-form-group>
 
-    <analitics-main-table />
-
+    <!-- <analitics-main-table /> -->
+    <!-- <div class="row">
+      <div class="col-5">
+        <analitics-main-table />
+      </div>
+      <div class="col-7">
+        <analitics-second-table />
+      </div>
+    </div> -->
+    <analitics-second-table />
   </div>
 </template>
 
 <script>
 import { BFormGroup } from 'bootstrap-vue'
 import flatPickr from 'vue-flatpickr-component'
-import AnaliticsMainTable from '@/anworks/analitics/AnaliticsMainTable.vue'
+// import AnaliticsMainTable from '@/anworks/analitics/AnaliticsMainTable.vue'
+import AnaliticsSecondTable from '@/anworks/analitics/AnaliticsSecondTable.vue'
 
 export default {
   components: {
     flatPickr,
     BFormGroup,
-    AnaliticsMainTable,
+    // AnaliticsMainTable,
+    AnaliticsSecondTable,
   },
   data() {
     return {
