@@ -9,16 +9,7 @@
         :config="{ mode: 'range', dateFormat: 'd.m.Y' }"
       />
     </b-form-group>
-
-    <!-- <analitics-main-table /> -->
-    <!-- <div class="row">
-      <div class="col-5">
-        <analitics-main-table />
-      </div>
-      <div class="col-7">
-        <analitics-second-table />
-      </div>
-    </div> -->
+    <analitics-diagrams />
     <analitics-second-table />
   </div>
 </template>
@@ -26,15 +17,15 @@
 <script>
 import { BFormGroup } from 'bootstrap-vue'
 import flatPickr from 'vue-flatpickr-component'
-// import AnaliticsMainTable from '@/anworks/analitics/AnaliticsMainTable.vue'
 import AnaliticsSecondTable from '@/anworks/analitics/AnaliticsSecondTable.vue'
+import AnaliticsDiagrams from '@/anworks/analitics/AnaliticsDiagrams.vue'
 
 export default {
   components: {
     flatPickr,
     BFormGroup,
-    // AnaliticsMainTable,
     AnaliticsSecondTable,
+    AnaliticsDiagrams,
   },
   data() {
     return {
