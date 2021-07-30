@@ -52,13 +52,8 @@ export default [
         icon: 'DollarSignIcon',
         children: [
           {
-            title: 'Finance',
+            title: 'ОСВ',
             route: 'finance',
-            icon: 'DollarSignIcon',
-          },
-          {
-            title: 'Second Finance',
-            route: 'second-finance',
             icon: 'DollarSignIcon',
           },
         ],

@@ -155,10 +155,10 @@ const router = new VueRouter({
       name: 'finance',
       component: () => import('@/views/Finance.vue'),
       meta: {
-        pageTitle: 'Finance',
+        pageTitle: 'Финансы',
         breadcrumb: [
           {
-            text: 'SubFinance',
+            text: 'ОСВ',
             active: true,
           },
         ],
