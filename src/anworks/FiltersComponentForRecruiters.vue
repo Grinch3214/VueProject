@@ -69,8 +69,8 @@ export default {
     padding: 0 20px;
     align-items: center;
     color: #fff;
-    background: linear-gradient(118deg, #7367f0, rgba(115, 103, 240, 0.7));
-    box-shadow: 0px 0px 6px 1px rgb(115 103 240 / 60%);
+    background: linear-gradient(118deg, #528be6, rgba(82, 139, 230, 0.7));
+    box-shadow: 0 0 10px 1px rgb(82 139 230 / 70%);
     p{
       margin: 12px 0;
     }

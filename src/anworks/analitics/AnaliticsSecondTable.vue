@@ -4,6 +4,7 @@
       caption-top
       responsive
       bordered
+      :sticky-header="stickyHeader"
     >
       <!-- <caption>Test table:</caption> -->
       <colgroup><col><col></colgroup>
@@ -1098,11 +1099,19 @@ export default {
     BTd,
     BTbody,
   },
-  data: () => ({
-    anWorks: 150,
-    socialAuthorization: 170,
-    activeUsersBot: 520,
-  }),
+  // data: () => ({
+  //   anWorks: 150,
+  //   socialAuthorization: 170,
+  //   activeUsersBot: 520,
+  // }),
+  data() {
+    return {
+      anWorks: 150,
+      socialAuthorization: 170,
+      activeUsersBot: 520,
+      stickyHeader: true,
+    }
+  },
 }
 </script>
 
@@ -1110,6 +1119,7 @@ export default {
   .table:not(.table-dark):not(.table-light) thead:not(.thead-dark) .an-purple,
   .table:not(.table-dark):not(.table-light) tfoot:not(.thead-dark) .an-purple {
     background-color: #5E5873;
+    color: #fff;
   }
   .table-bg-green {
     background-color: #40A47A;
